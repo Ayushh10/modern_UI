@@ -1,8 +1,8 @@
 from os import system
-prog = ['chrome', 'notepad', 'wmplayer', 'vlc', 'anaconda', 'jupyter notebook', 'idle', 'teamviewer', "github"]
+prog = ['chrome', 'notepad', 'wmplayer', 'vlc', 'anaconda', 'jupyter notebook', 'idle', 'teamviewer', "github"] # list executable programs
 ignore, cont = ["not", 'terminate'], True
-#trig = ["run", "launch", "execute", "load"]
-print("Please, enter your name: ", end='')
+#trig = ["run", "launch", "execute", "load"] // the list of commands this program can take to execute a file
+print("Please, enter your name: ", end='') 
 name = input().capitalize()
 print(f"Hello, {name}, greetings...\n", end='')
 print('The list of programs: \n')
@@ -10,7 +10,7 @@ for i in prog:
      print(i, end=', ')
 while cont:   
      print('\n\n############################################################################## \
-     	    \n\nEnter your command: ', end='')
+     	    \n\nEnter your command: ', end='') #used an escape sequence '\' to contine the line of the same print()+
      command = input().lower()
      for i in ignore:
           if i in command.split():
@@ -35,5 +35,5 @@ while cont:
      cont = input().lower()
      if cont == 'n':
           print('Thank You!')
-          cont =False
+          cont = False
 
